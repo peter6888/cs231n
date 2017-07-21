@@ -65,7 +65,7 @@ https://github.com/peter6888/cs231n/blob/master/assignment3/GANs-TensorFlow.ipyn
 
 
 
-Other Resources: 
+## Other Resources: 
 网易云课堂 http://study.163.com/course/introduction/1003223001.htm#/courseDetail 
 Video from Past Semesters （李飞飞主讲）
 https://www.youtube.com/watch?v=g-PvXUjD6qg&list=PLlJy-eBtNFt6EuMxFYRiNRS07MCWN5UIA
