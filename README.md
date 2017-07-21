@@ -3,20 +3,15 @@ CS231N - Convolutional Neural Networks for Visual Recognition (Spring 2016-2017,
 
 —>Assignment 1
 http://cs231n.github.io/assignments2017/assignment1/
-
 [Finished Assignment 1]
 Q1: k-Nearest Neighbor classifier (20 points)  
 https://github.com/peter6888/cs231n/blob/master/assignment1/knn.ipynb
-
 Q2: Training a Support Vector Machine (25 points) 
 https://github.com/peter6888/cs231n/blob/master/assignment1/svm.ipynb
-
 Q3: Implement a Softmax classifier (20 points)
 https://github.com/peter6888/cs231n/blob/master/assignment1/softmax.ipynb
-
 Q4: Two-Layer Neural Network (25 points)
 https://github.com/peter6888/cs231n/blob/master/assignment1/two_layer_net.ipynb
-
 Q5: Higher Level Representations: Image Features (10 points)
 https://github.com/peter6888/cs231n/blob/master/assignment1/features.ipynb
 
