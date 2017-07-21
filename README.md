@@ -5,8 +5,8 @@ any questions please email to qq1800@gmail.com
 
 CS231N - Convolutional Neural Networks for Visual Recognition (Spring 2016-2017, Starts from April 2017）
 
-## Assignment 1
-http://cs231n.github.io/assignments2017/assignment1/
+## Assignment #1: Image Classification, kNN, SVM, Softmax, Neural Network
+Assignment instruction http://cs231n.github.io/assignments2017/assignment1/
 ### [Finished Assignment 1]
 Q1: k-Nearest Neighbor classifier (20 points)  
 https://github.com/peter6888/cs231n/blob/master/assignment1/knn.ipynb
@@ -24,8 +24,8 @@ Q5: Higher Level Representations: Image Features (10 points)
 https://github.com/peter6888/cs231n/blob/master/assignment1/features.ipynb
 
 
-## Assignment 2
-http://cs231n.github.io/assignments2017/assignment2/
+## Assignment #2: Fully-Connected Nets, Batch Normalization, Dropout, Convolutional Nets
+Assignment Instruction http://cs231n.github.io/assignments2017/assignment2/
 
 ### [Finished Assignment 2]
 Q1: Fully-connected Neural Network (25 points)
@@ -44,8 +44,8 @@ Q5: PyTorch / TensorFlow on CIFAR-10 (10 points)
 https://github.com/peter6888/cs231n/blob/master/assignment2/TensorFlow.ipynb
 
 
-## Assignment 3
-http://cs231n.github.io/assignments2017/assignment3/
+## Assignment #3: Image Captioning with Vanilla RNNs, Image Captioning with LSTMs, Network Visualization, Style Transfer, Generative Adversarial Networks
+Assignment Instruction: http://cs231n.github.io/assignments2017/assignment3/
 ### [Finished Assignment 3]
 Q1: Image Captioning with Vanilla RNNs (25 points)
 https://github.com/peter6888/cs231n/blob/master/assignment3/RNN_Captioning.ipynb
