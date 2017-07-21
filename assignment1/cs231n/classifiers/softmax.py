@@ -1,5 +1,6 @@
 import numpy as np
 from random import shuffle
+from past.builtins import xrange
 
 def softmax_loss_naive(W, X, y, reg):
   """
@@ -29,25 +30,33 @@ def softmax_loss_naive(W, X, y, reg):
   # here, it is easy to run into numeric instability. Don't forget the        #
   # regularization!                                                           #
   #############################################################################
-  num_classes = W.shape[1]
-  num_train = X.shape[0]
-
-  for i in xrange(num_train):
-     scores = X[i].dot(W)
-     shift_scores = scores - max(scores)
-     loss_i = - shift_scores[y[i]] + np.log(sum(np.exp(shift_scores)))
-     loss += loss_i
-     for j in xrange(num_classes):
-         softmax_output = np.exp(shift_scores[j])/sum(np.exp(shift_scores))
-         if j == y[i]:
-             dW[:,j] += (-1 + softmax_output) *X[i] 
-         else: 
-             dW[:,j] += softmax_output *X[i] 
-
-  loss /= num_train 
-  loss +=  0.5* reg * np.sum(W * W)
-  dW = dW/num_train + reg* W 
-  #pass
+  #forward pass
+  num_train, num_feature = X.shape
+  num_class = W.shape[1]
+  L = 0
+  for i in range(num_train):
+        predict_i = X[i, :].dot(W)
+        # To imrove numeric instability, normalize by remove a max value.
+        # Brief prove below:
+        # exp(x_j+m)/(exp(x_1+m)+exp(x_2+m)+...+exp(x_n+m)) 
+        #    = exp(x_j) * exp(m) / exp(m) * (exp(x_1) + exp(x_2) + ... + exp(x_n))
+        #    = exp(x_j) / (exp(x_1) + exp(x_2) + ... + exp(x_n))
+        predict_i -= np.max(predict_i)
+        # L_i = -np.log(np.exp(predict_i[y[i]]) / np.sum(np.exp(predict_i)))
+        # log(x/y) = log(x) - log(y)
+        L_i = -predict_i[y[i]] + np.log(np.sum(np.exp(predict_i)))
+        L += L_i
+        
+        p = np.exp(predict_i) / np.sum(np.exp(predict_i))
+        
+        #back prop for gradient
+        for j in range(num_class):
+            dW[:,j] += p[j] * X[i, :]
+        dW[:,y[i]] -= X[i, :]
+        
+  loss = L/num_train + reg * np.sum(W*W)
+  dW /= num_train
+  dW += reg * W
   #############################################################################
   #                          END OF YOUR CODE                                 #
   #############################################################################
@@ -71,20 +80,25 @@ def softmax_loss_vectorized(W, X, y, reg):
   # here, it is easy to run into numeric instability. Don't forget the        #
   # regularization!                                                           #
   #############################################################################
-  num_classes = W.shape[1]
-  num_train = X.shape[0]
-  scores = X.dot(W)
-  shift_scores = scores - np.max(scores, axis = 1).reshape(-1,1)
-  softmax_output = np.exp(shift_scores)/np.sum(np.exp(shift_scores), axis = 1).reshape(-1,1)
-  loss = -np.sum(np.log(softmax_output[range(num_train), list(y)]))
-  loss /= num_train 
-  loss +=  0.5* reg * np.sum(W * W)
+  predict = X.dot(W) # predict.shape-->(N,C)
+  num_train, num_class = predict.shape
+    
+  #normalize to avoid the numeric instability
+  predict -= np.max(predict, axis=1).reshape(-1,1)
+    
+  correct_predict = predict[range(num_train), y] # correct_predict.shape --> (N,1)
+  sum_exp_train = np.sum(np.exp(predict), axis=1).reshape(-1,1)
+
+  # -log(x/y) = -log(x)+log(y), which here log(x)=correct_predict
+  L = -correct_predict + np.log(np.sum(np.exp(predict), axis=1)) 
+  loss = np.sum(L) / num_train + reg * np.sum(W*W)
+    
+  prob = np.exp(predict) / sum_exp_train
+  prob[range(num_train),y] -= 1
   
-  dS = softmax_output.copy()
-  dS[range(num_train), list(y)] += -1
-  dW = (X.T).dot(dS)
-  dW = dW/num_train + reg* W 
-  #pass
+  dW = np.dot(X.T, prob)
+  dW /= num_train
+  dW += reg * W
   #############################################################################
   #                          END OF YOUR CODE                                 #
   #############################################################################
