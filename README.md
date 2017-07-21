@@ -10,8 +10,7 @@ http://cs231n.github.io/assignments2017/assignment1/
 ### [Finished Assignment 1]
 Q1: k-Nearest Neighbor classifier (20 points)  
 https://github.com/peter6888/cs231n/blob/master/assignment1/knn.ipynb
-
-Q2: Training a Support Vector Machine (25 points) 
+### Q2: Training a Support Vector Machine (25 points) 
 https://github.com/peter6888/cs231n/blob/master/assignment1/svm.ipynb
 
 Q3: Implement a Softmax classifier (20 points)
