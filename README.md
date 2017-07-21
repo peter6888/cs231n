@@ -1,15 +1,13 @@
-# cs231n - Spring 2016-2017
-cs231n assignments
-
+# cs231n - Spring 2016-2017 Assignments
 all completed on May,2017
 
 any questions please email to qq1800@gmail.com
 
 CS231N - Convolutional Neural Networks for Visual Recognition (Spring 2016-2017, Starts from April 2017）
 
-#Assignment 1
+## Assignment 1
 http://cs231n.github.io/assignments2017/assignment1/
-##[Finished Assignment 1]
+### [Finished Assignment 1]
 Q1: k-Nearest Neighbor classifier (20 points)  
 https://github.com/peter6888/cs231n/blob/master/assignment1/knn.ipynb
 
