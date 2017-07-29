@@ -1,10 +1,13 @@
 # Scores for each assignment1 by the teacher
 ## Assignment1
-Final Score - 96 with 4 bonus
+Final Score - 96 with 4 bonus 
 
 HW1 Score (out of 100): 96
+
 HW1 Bonus (out of 10, if applicable): 4
+
 Here's the breakdown of your score:
+
 	• kNN (out of 20): 20
 	• SVM (out of 25): 25
 	• Softmax (out of 20): 18
@@ -14,6 +17,7 @@ Here's the breakdown of your score:
 	• Bonus (Two Layer Net, if applicable): 4
 	• Bonus (Q6, if applicable): 0
 	• Bonus Comments (if applicable):
+	
 Late days used (if applicable): 0
 ## Assignment2
 Final Score 96 with 2 bonus
