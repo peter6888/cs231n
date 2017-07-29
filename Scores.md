@@ -23,8 +23,11 @@ Late days used (if applicable): 0
 Final Score 96 with 2 bonus
 
 HW2 Score (out of 100): 96
+
 HW2 Bonus (out of 10, if applicable): 2
+
 Here's the breakdown of your score:
+
 	• Fully-Connected Nets (25): 25
 	• Batch Normalization (25): 25
 	• Dropout (10): 7
@@ -32,9 +35,13 @@ Here's the breakdown of your score:
 	• TensorFlow/PyTorch(10): 10
 	• Bonus (Batch Norm Q2): 2
 	• Bonus (Q6):
-	• Comments: Q3: Incorrect forward pass for inverted dropout (-2), Insufficient inline answer (no mention of regularization) (-1); Q4: Spatial batchnorm incorrect dx (-1 point); 
+	• Comments: Q3: Incorrect forward pass for inverted dropout (-2), Insufficient inline answer (no mention of regularization) (-1); 
+	• Q4: Spatial batchnorm incorrect dx (-1 point); 
+	
 Late days used (if applicable): 0
+
 Here are some stats (excluding bonus):
+
 Max: 100
 Mean: 90.98
 Median: 97.00
@@ -42,9 +49,13 @@ Std. Dev: 19.66
 
 ## Assignment3
 Final Score 99 with bonus 2
+
 HW3 Score (out of 100): 99
+
 HW3 Bonus (out of 10, if applicable): 2
+
 Here's the breakdown of your score:
+
 	• RNN_Captioning (25): 25
 	• LSTM_Captioning (30): 29
 	• Network Vis (15): 15
@@ -53,7 +64,9 @@ Here's the breakdown of your score:
 	• Bonus LSTM:
 	• Bonus GAN: 2
 	• Comments: Q2: LSTM backward dWh (-1); Q5: WGAN (+2);
+
 Late days used (if applicable): 3
+
 Here are some stats (excluding bonus):
 Max: 100
 Mean: 91.79
