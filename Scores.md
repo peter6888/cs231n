@@ -1,4 +1,4 @@
-# Scores for each assignment1 by the teacher
+# Scores for each assignments by the teacher
 ## Assignment1
 Final Score - 96 with 4 bonus 
 
