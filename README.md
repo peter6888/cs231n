@@ -3,6 +3,10 @@ Any questions please email to qq1800@gmail.com
 
 CS231N - Convolutional Neural Networks for Visual Recognition (Spring 2016-2017, Starts from April 2017）
 
+The official CS231N Sprint 2017 Video already pushed in YouTube
+Please vist the homepage!
+https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv
+
 ## Assignment #1: Image Classification, kNN, SVM, Softmax, Neural Network
 [Assignment #1 instruction](http://cs231n.github.io/assignments2017/assignment1/)
 ### [Finished Assignment 1]
