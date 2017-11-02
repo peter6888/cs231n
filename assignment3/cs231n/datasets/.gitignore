@@ -1,0 +1,3 @@
+coco_captioning/*
+imagenet_val_25.*
+squeezenet.ckpt.*
